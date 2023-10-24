@@ -1,23 +1,14 @@
-import logo from './logo.svg';
+
+import { BarGraph } from './Components/BarGraph.tsx';
 import './App.css';
 
 function App() {
+  let heights = [1491,1918,1552,1353, 1500, 1600, 2239, 1234, 2463, 1678, 768, 1000];
+  let labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Bar Graph</h1>
+      <BarGraph heightsArray={heights} markerCount={10} labels={labels}/>
     </div>
   );
 }
